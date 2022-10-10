@@ -7,7 +7,7 @@ import Tippy from '@tippyjs/react';
 import classNames from 'classnames/bind';
 import 'tippy.js/dist/tippy.css';
 import images from '~/assets/images';
-import Button from '~/components/Button';
+import { Link } from 'react-router-dom';
 import {
     FeedBackIcon,
     GetCoinsIcon,
@@ -19,6 +19,8 @@ import {
     SettingIcon,
     ViewProfileIcon,
 } from '~/components/Icons';
+import routesConfig from '~/config/routes';
+import Button from '~/components/Button';
 import Image from '~/components/Image';
 import Menu from '~/components/Popper/Menu';
 import style from './Header.module.scss';
@@ -81,12 +83,16 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={images.logo} alt="Tiktok" />
+                <Link to={routesConfig.home} className={cx('logo-link')}>
+                    <img src={images.logo} alt="Tiktok" />
+                </Link>
+
                 <Seach />
                 <div className={cx('action')}>
                     {currentUser ? (
                         <>
                             <Tippy
+                                hideOnClick={false}
                                 delay={[0, 50]}
                                 content="Upload Video"
                                 placement="bottom"
@@ -96,6 +102,7 @@ function Header() {
                                 </button>
                             </Tippy>
                             <Tippy
+                                hideOnClick={false}
                                 delay={[0, 50]}
                                 content="Upload Video"
                                 placement="bottom"
@@ -105,6 +112,7 @@ function Header() {
                                 </button>
                             </Tippy>
                             <Tippy
+                                hideOnClick={false}
                                 delay={[0, 50]}
                                 content="Inbox"
                                 placement="bottom"
@@ -136,7 +144,6 @@ function Header() {
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
                                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/ccec8fb625ed3affab64b5a9ee099837~c5_100x100.jpeg?x-expires=1665313200&x-signature=71HsD4T4CdcXYJfjAlvLGtvQ0WI%3D"
-                                // fallback="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-aiso/65d3c6b1d1e205c75536ccf1f26d552d~c5_100x100.jpeg?x-expires=1665392400&x-signature=xEMOoEjEzhuKckt9EzDeF9CoQbA%3D"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
