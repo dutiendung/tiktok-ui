@@ -19,12 +19,13 @@ import {
     SettingIcon,
     ViewProfileIcon,
 } from '~/components/Icons';
-import routesConfig from '~/config/routes';
+
 import Button from '~/components/Button';
 import Image from '~/components/Image';
 import Menu from '~/components/Popper/Menu';
 import style from './Header.module.scss';
 import Seach from '../Search';
+import config from '~/config';
 const cx = classNames.bind(style);
 const MENU_ITEMS = [
     {
@@ -83,7 +84,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={routesConfig.home} className={cx('logo-link')}>
+                <Link to={config.routes.home} className={cx('logo-link')}>
                     <img src={images.logo} alt="Tiktok" />
                 </Link>
 

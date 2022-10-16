@@ -13,8 +13,9 @@
     input {
         flex: 1;
         font-size: 1.6rem;
+        height: 100%;
+        padding-right: 40px;
         color: var(--black);
-        padding: 12px 0;
         background-color: transparent;
         caret-color: var(--primary);
         font-family: var(--font-family);
