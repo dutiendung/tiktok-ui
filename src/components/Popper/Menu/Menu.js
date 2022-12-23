@@ -48,7 +48,7 @@ function Menu({
             </PopperWrapper>
         </div>
     );
-    //Reset to frist page
+    //Reset to first page
     const handleReset = () => setHistory((prev) => prev.slice(0, 1));
     return (
         <Tippy

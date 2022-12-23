@@ -24,7 +24,7 @@ import Button from '~/components/Button';
 import Image from '~/components/Image';
 import Menu from '~/components/Popper/Menu';
 import style from './Header.module.scss';
-import Seach from '../Search';
+import Search from '../Search';
 import config from '~/config';
 const cx = classNames.bind(style);
 const MENU_ITEMS = [
@@ -60,7 +60,7 @@ function Header() {
         {
             icon: <ViewProfileIcon />,
             title: 'View profile',
-            to: '/@hoaa',
+            to: '/@dutiendung',
         },
         {
             icon: <GetCoinsIcon />,
@@ -88,7 +88,7 @@ function Header() {
                     <img src={images.logo} alt="Tiktok" />
                 </Link>
 
-                <Seach />
+                <Search />
                 <div className={cx('action')}>
                     {currentUser ? (
                         <>
@@ -144,7 +144,7 @@ function Header() {
                             <Image
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
-                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/ccec8fb625ed3affab64b5a9ee099837~c5_100x100.jpeg?x-expires=1665313200&x-signature=71HsD4T4CdcXYJfjAlvLGtvQ0WI%3D"
+                                src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tiktok-obj/1665757201241090.jpeg?x-expires=1666695600&x-signature=lCguCYt%2FwueUwOvrRWIXEE0Ic9g%3D"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
